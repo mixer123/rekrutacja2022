@@ -1,0 +1,15 @@
+{% extends 'admin/licznik/kandydat/change_list.html' %}
+
+{% block filters %}
+    <div>
+
+        <form action="wp/" method="POST">
+            {% csrf_token %}
+                <button type="submit">Zestawienie</button>
+        </form>
+            <a href="/admin/licznik/kandydat/export/?" class="export_link"> <button type="submit">Eksport kandydatów</button></a>
+
+    </div>
+    <br />
+    {{ block.super }}
+{% endblock %}

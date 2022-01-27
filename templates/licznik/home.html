@@ -1,0 +1,14 @@
+{% extends 'licznik/base.html' %}
+
+{% block title %}Home{% endblock %}
+Home
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+{% else %}
+  <div class="niezalogowany">
+    Jesteś nie zalogowany
+      <a href="{% url 'login' %}">Zaloguj się</a>
+  </div>
+{% endif %}
+{% endblock %}
