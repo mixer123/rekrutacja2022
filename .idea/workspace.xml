@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92a25a7b-a549-4e82-a8b5-39b55cbae335" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja2022/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja2022/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja2022/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja2022/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/rekrutacja2022/settings.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/registration/login.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/licznik/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/licznik/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/accounts/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/registration/signup.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/licznik/models.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="230QRD4hJJ1DMBLSuaNs6tqNPQf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sendemails" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/accounts/templates" />
+      <recent name="$PROJECT_DIR$/accounts/static" />
+      <recent name="$PROJECT_DIR$/templates/registration" />
+      <recent name="$PROJECT_DIR$/licznik/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/licznik/templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="rekrutacja2022" type="Python.DjangoServer" factoryName="Django server">
+      <module name="rekrutacja2022" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92a25a7b-a549-4e82-a8b5-39b55cbae335" name="Changes" comment="" />
+      <created>1640868514301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640868514301</updated>
+      <workItem from="1640868515650" duration="547000" />
+      <workItem from="1640869076620" duration="6361000" />
+      <workItem from="1641310381890" duration="3302000" />
+      <workItem from="1641394716251" duration="1569000" />
+      <workItem from="1641552712748" duration="1996000" />
+      <workItem from="1641554727440" duration="4879000" />
+      <workItem from="1641572252411" duration="3262000" />
+      <workItem from="1641629637638" duration="1284000" />
+      <workItem from="1641651312760" duration="8000" />
+      <workItem from="1641714317973" duration="8836000" />
+      <workItem from="1641739998779" duration="1190000" />
+      <workItem from="1641824771036" duration="4261000" />
+      <workItem from="1641912436011" duration="25000" />
+      <workItem from="1641912703991" duration="5526000" />
+      <workItem from="1641999691840" duration="67000" />
+      <workItem from="1641999776448" duration="1641000" />
+      <workItem from="1642009420314" duration="615000" />
+      <workItem from="1642012043753" duration="1848000" />
+      <workItem from="1642172155124" duration="637000" />
+      <workItem from="1642173207146" duration="659000" />
+      <workItem from="1642175115043" duration="502000" />
+      <workItem from="1642175642854" duration="738000" />
+      <workItem from="1642267288783" duration="145000" />
+      <workItem from="1642268516797" duration="1103000" />
+      <workItem from="1642327683910" duration="473000" />
+      <workItem from="1642328176356" duration="33000" />
+      <workItem from="1642867800398" duration="41000" />
+      <workItem from="1642868114792" duration="682000" />
+      <workItem from="1643049479410" duration="6000" />
+      <workItem from="1643131590618" duration="11519000" />
+      <workItem from="1643221031221" duration="24000" />
+      <workItem from="1643221196341" duration="59000" />
+      <workItem from="1643221897421" duration="5658000" />
+      <workItem from="1643303908176" duration="41000" />
+      <workItem from="1643303989656" duration="4968000" />
+      <workItem from="1644080893019" duration="42000" />
+      <workItem from="1644241323470" duration="3101000" />
+      <workItem from="1644249829280" duration="2459000" />
+      <workItem from="1644262741832" duration="6894000" />
+      <workItem from="1644306328153" duration="1286000" />
+      <workItem from="1644323403082" duration="144000" />
+      <workItem from="1644323598074" duration="1444000" />
+      <workItem from="1644340987938" duration="1923000" />
+      <workItem from="1644345446749" duration="609000" />
+      <workItem from="1644346360584" duration="2441000" />
+      <workItem from="1644864817622" duration="613000" />
+      <workItem from="1644947990841" duration="17000" />
+      <workItem from="1644949799804" duration="1681000" />
+      <workItem from="1644953580122" duration="348000" />
+      <workItem from="1645096694850" duration="2795000" />
+      <workItem from="1645101277086" duration="406000" />
+      <workItem from="1645110045156" duration="42000" />
+      <workItem from="1646931954179" duration="70000" />
+      <workItem from="1646932312765" duration="3084000" />
+      <workItem from="1647001538719" duration="306000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/licznik/models.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
