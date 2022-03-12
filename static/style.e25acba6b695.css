@@ -1,0 +1,19 @@
+
+p {
+  color: orangered;
+  font-size: 15px;
+
+
+  }
+
+.niezalogowany{
+  color: blue;
+  font-size: 15px;
+  padding-left: 25px;
+
+}
+
+.bgpage{
+  background-color: #d1f0bb;
+}
+
