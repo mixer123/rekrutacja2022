@@ -1,23 +1,23 @@
 from django.contrib import admin
 
 
-from django.http import HttpResponseRedirect
+# from django.http import HttpResponseRedirect
 from django.urls import path
 from django.shortcuts import redirect
 from import_export import resources
 from import_export.admin import ExportMixin, ImportMixin
-from django.contrib import messages
-from django_object_actions import DjangoObjectActions
-from django.urls import reverse
-from admin_tools.menu import items, Menu
+# from django.contrib import messages
+# from django_object_actions import DjangoObjectActions
+# from django.urls import reverse
+# from admin_tools.menu import items, Menu
 from django.contrib import admin
 from import_export.fields import Field
 from import_export.forms import ImportForm, ConfirmImportForm
 
 from .models import *
-from import_export.admin import ImportExportMixin
-from import_export.admin import ImportExportActionModelAdmin
-from import_export.admin import ImportExportModelAdmin
+# from import_export.admin import ImportExportMixin
+# from import_export.admin import ImportExportActionModelAdmin
+# from import_export.admin import ImportExportModelAdmin
 from django import forms
 from import_export.formats import base_formats
 
@@ -98,10 +98,9 @@ class KandydatResources(resources.ModelResource):
         model = Kandydat
         # skip_unchanged = True
         # report_skipped = True
-        fields = ('fanily_name','second_name1','second_name2','pesel','suma_pkt')
+        fields = ('family_name','second_name1','second_name2','pesel','suma_pkt','document')
 
-        # import_id_fields = ('family_name','second_name1', 'pesel')
-        # fields = ('family_name','second_name1', 'pesel', )
+
 
 
 
@@ -111,7 +110,7 @@ class KandydatAdmin(ExportMixin, admin.ModelAdmin):
 
     list_display = ['family_name','second_name1', 'document', 'clas', 'suma_pkt','pesel']
     search_fields = ['family_name', 'pesel','document__name','second_name1','second_name2']
-    list_filter = ['document', 'clas']
+    list_filter = ['document', 'clas','internat']
     resource_class = KandydatResources
     list_per_page = 20
 
@@ -185,14 +184,3 @@ class KandydatAdmin(ExportMixin, admin.ModelAdmin):
 
 
 admin.site.register(Kandydat, KandydatAdmin)
-
-#
-# ##########  IMPORT
-# class KandydatAdmin(ImportMixin,admin.ModelAdmin):
-#     class KandydatResource(resources.ModelResource):
-#         class Meta:
-#             model = Kandydat
-#             fields = ('family_name','second_name1', 'pesel', )
-#             exclude = ('id')
-#     resource_class = KandydatResource
-# admin.site.register(Kandydat, KandydatAdmin)

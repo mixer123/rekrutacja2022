@@ -35,10 +35,13 @@ class Oryginal(models.Model):
         super(Oryginal, self).save()
 
 class Ocena(models.Model):
+    def default_ocena(self):
+        return Ocena.objects.get(ocena=0)
     class Meta:
         verbose_name_plural = "Oceny"
         verbose_name = "Oceny"
     OCENY = (
+        (0, 0),
         (2, 2),
         (3, 3),
         (4, 4),
@@ -100,15 +103,15 @@ class Kandydat(models.Model):
     document  = models.ForeignKey(Oryginal, null=True, on_delete=models.SET_NULL, verbose_name='Dokument')
     internat = models.BooleanField(default=False, verbose_name='Internat')
     j_pol_egz = models.IntegerField(default=0, verbose_name='J.polski punkty egzamin',validators=[
-            MaxValueValidator(50),MinValueValidator(0)])
+            MaxValueValidator(100),MinValueValidator(0)])
     mat_egz = models.IntegerField(default=0, verbose_name='Matematyka punkty egzamin',validators=[
-            MaxValueValidator(50),MinValueValidator(0)])
+            MaxValueValidator(100),MinValueValidator(0)])
     j_obcy_egz = models.IntegerField(default=0, verbose_name='J.obcy punkty egzamin',validators=[
-            MaxValueValidator(50),MinValueValidator(0)])
-    j_pol_oc = models.ForeignKey(Ocena, null=True,  on_delete=models.SET_NULL, related_name='j_pol_oc', verbose_name='J.polski ocena')
-    mat_oc = models.ForeignKey(Ocena, null=True, on_delete=models.SET_NULL, related_name='mat_oc',  verbose_name='Matematyka ocena')
-    biol_oc = models.ForeignKey(Ocena, null=True, on_delete=models.SET_NULL, related_name='biol_oc',  verbose_name='Biologia ocena')
-    inf_oc = models.ForeignKey(Ocena, null=True, on_delete=models.SET_NULL, related_name='inf_oc',  verbose_name='Informatyka ocena')
+            MaxValueValidator(100),MinValueValidator(0)])
+    j_pol_oc = models.ForeignKey(Ocena, default='default_ocena',null=True,  on_delete=models.SET_NULL, related_name='j_pol_oc', verbose_name='J.polski ocena')
+    mat_oc = models.ForeignKey(Ocena, null=True, default='default_ocena', on_delete=models.SET_NULL, related_name='mat_oc',  verbose_name='Matematyka ocena')
+    biol_oc = models.ForeignKey(Ocena, null=True, default='default_ocena',on_delete=models.SET_NULL, related_name='biol_oc',  verbose_name='Biologia ocena')
+    inf_oc = models.ForeignKey(Ocena, null=True,default='default_ocena',on_delete=models.SET_NULL, related_name='inf_oc',  verbose_name='Informatyka ocena')
     sw_wyr = models.BooleanField(default=False, verbose_name='Świadectwo z wyróżnieniem')
     konk_ponad_wyr = models.IntegerField(default=0, verbose_name='Konkurs ponadwojewódzki', choices=KPW)
     konk_woj = models.IntegerField(default=0, verbose_name='Konkurs wojewódzki', choices=KW)
@@ -134,6 +137,8 @@ class Kandydat(models.Model):
 
     def save(self):
         # self.suma_pkt = float(self.j_pol_oc.punkty)
+
+
         self.suma_pkt = float(self.j_pol_egz) * 0.35 + float(self.mat_egz) *0.35 + float(self.j_obcy_egz) * 0.3 + float(self.j_pol_oc.punkty) + float(self.mat_oc.punkty) + float(self.biol_oc.punkty) + float(self.inf_oc.punkty) + float(self.konk_ponad_wyr) + float(self.konk_woj) + float(self.konk_przedm) + float(self.konk_inne) + float(self.aktyw_spol)
         if self.sw_wyr:
             self.suma_pkt += 7

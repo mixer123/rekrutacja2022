@@ -81,26 +81,26 @@ WSGI_APPLICATION = 'rekrutacja2022.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# BAZA na localhost
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-#
+# # # BAZA na localhost
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#
-#         'NAME': 'd812jd0nfombqp',
-#         'USER': 'sbxwwfolpwmppo',
-#         'PASSWORD': '3cd3343f8b8c3fe71344f1e3ec445762d9f025e6505aa4e03df98354fe6d7e70',
-#         'HOST': 'ec2-52-210-120-210.eu-west-1.compute.amazonaws.com',
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+#
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'd812jd0nfombqp',
+        'USER': 'sbxwwfolpwmppo',
+        'PASSWORD': '3cd3343f8b8c3fe71344f1e3ec445762d9f025e6505aa4e03df98354fe6d7e70',
+        'HOST': 'ec2-52-210-120-210.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 
