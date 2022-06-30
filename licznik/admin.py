@@ -1,11 +1,14 @@
+import csv
+
 from django.contrib import admin
 
 
 # from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.urls import path
 from django.shortcuts import redirect
 from import_export import resources
-from import_export.admin import ExportMixin, ImportMixin
+from import_export.admin import ExportMixin, ImportMixin, ExportActionMixin
 # from django.contrib import messages
 # from django_object_actions import DjangoObjectActions
 # from django.urls import reverse
@@ -44,8 +47,32 @@ from import_export.formats import base_formats
 #             ),
 #         ]
 
-
-
+#
+# class ExportCsvMixin:
+#     def get_export_headers(self):
+#         headers = []
+#         for field in self.get_export_fields():
+#             headers.append(self.Meta.model._meta.get_field(field.column_name).verbose_name)
+#         return headers
+#     def export_as_csv(self, request, queryset):
+#
+#         meta = self.model._meta
+#         # meta = ['family_name','second_name1','second_name2','pesel','suma_pkt','document']
+#         print('meta', meta)
+#         # field_names = [field.name for field in meta.fields]
+#         field_names =  ['family_name','second_name1','second_name2','pesel','suma_pkt','document']
+#
+#         response = HttpResponse(content_type='text/csv')
+#         response['Content-Disposition'] = 'attachment; filename={}.csv'.format(meta)
+#         writer = csv.writer(response)
+#
+#         writer.writerow(field_names)
+#         for obj in queryset:
+#             row = writer.writerow([getattr(obj, field) for field in field_names])
+#
+#         return response
+#
+#     export_as_csv.short_description = "Export"
 
 class CustomImportForm(ImportForm):
     author = forms.ModelChoiceField(
@@ -88,24 +115,28 @@ admin.site.register(Ocena, OcenaAdmin)
 
 
 class KandydatResources(resources.ModelResource):
-
     family_name = Field(attribute="family_name", column_name="Nazwisko")
     second_name1 = Field(attribute="second_name1", column_name='Imię1')
     second_name2 = Field(attribute="second_name2", column_name='Imię2')
-    pesel = Field(attribute="pesel" ,  column_name = "Pesel")
+    pesel = Field(attribute="pesel", column_name="Pesel")
     suma_pkt = Field(attribute="suma_pkt", column_name="Pkt")
+    document__name = Field(attribute="document", column_name="Dokument")
+    clas__name = Field(attribute='clas', column_name='Klasa')
+
+
     class Meta:
         model = Kandydat
         # skip_unchanged = True
         # report_skipped = True
-        fields = ('family_name','second_name1','second_name2','pesel','suma_pkt','document')
+        fields = ('family_name','second_name1','second_name2','pesel','suma_pkt','document__name','clas__name')
 
 
 
 
 
+# @admin.register(Kandydat)
+class KandydatAdmin(ExportActionMixin ,admin.ModelAdmin):
 
-class KandydatAdmin(ExportMixin, admin.ModelAdmin):
     change_list_template = "admin/licznik/kandydat/kandydat_changelist.html"
 
     list_display = ['family_name','second_name1', 'document', 'clas', 'suma_pkt','pesel']
@@ -113,6 +144,8 @@ class KandydatAdmin(ExportMixin, admin.ModelAdmin):
     list_filter = ['document', 'clas','internat']
     resource_class = KandydatResources
     list_per_page = 20
+    # fields = ('family_name','second_name1','second_name2','pesel','suma_pkt','document')
+    # actions = ["export_as_csv"]
 
 
     def get_export_formats(self):
